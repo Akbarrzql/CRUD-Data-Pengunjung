@@ -50,7 +50,7 @@ include "navbar.php";
                                 <td><?= $pengunjung["asal"]; ?></td>
                                 <td><?= $pengunjung["jenisKelamin"]; ?></td>
                                 <td><?= $pengunjung["tgl_masuk"]; ?></td>
-                                <td><img src="<?= $pengunjung["foto"]; ?>" alt="<?= $pengunjung["nama"]; ?>" width="50" height="50"></td>
+                                <td><img src="img/<?= $pengunjung["foto"]; ?>" alt="<?= $pengunjung["nama"]; ?>" width="50" height="50"></td>
                                 <td>
                                     <a class="btn btn-primary" href=""  data-bs-toggle="modal" data-bs-target="#modalDetail<?= $pengunjung['id'] ?>">Detail</a>
                                     <a class="btn btn-warning" href="edit.php?id=<?= $pengunjung['id'] ?>">edit</a>
@@ -63,7 +63,7 @@ include "navbar.php";
                                     <div class="modal-dialog">
                                         <div class="modal-content">
                                             <div class="modal-header">
-                                            <h5 class="modal-title" id="modalDetailLabel">Detail Data pengunjung$pengunjung</h5>
+                                            <h5 class="modal-title" id="modalDetailLabel">Detail Data Pengunjung</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
                                     <div class="modal-body">
@@ -100,7 +100,7 @@ include "navbar.php";
                                     <div class="form-group">
                                         <label for="" class="form-label">Foto</label>
                                         <br>
-                                        <img src="<?= $pengunjung['foto'] ?>" alt="<?= $pengunjung['nama'] ?>" width="100" height="100">
+                                        <img src="img/<?= $pengunjung['foto'] ?>" alt="<?= $pengunjung['nama'] ?>" width="100" height="100">
                                     </div>
                                     <br>
                                     </div>

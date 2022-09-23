@@ -84,6 +84,7 @@
                         </div>
                         <div class="mb-3">
                             <label for="">Foto</label>
+                            <?=$data["foto"]?>
                             <input type="file" class="form-control" id="exampleInputEmail1" name="foto" value="<?= $data["foto"]; ?>">
                         </div>
 

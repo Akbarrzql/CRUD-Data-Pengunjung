@@ -55,8 +55,9 @@
             <div class="row">
                 <div class="col-md-12">
                     <h3 align="center">Edit Data Siswa</h3>
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= $data["id"]; ?>">
+                        <input type="hidden" name="foto_lama" value="<?= $data["foto"]; ?>">
                         <div class="mb-3">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control" id="nama" name="nama" value="<?= $data["nama"]; ?>">
@@ -84,7 +85,9 @@
                         </div>
                         <div class="mb-3">
                             <label for="">Foto</label>
-                            <?=$data["foto"]?>
+                            <br>
+                            <img src="img/<?= $data["foto"]; ?>">
+                            <br>
                             <input type="file" class="form-control" id="exampleInputEmail1" name="foto" value="<?= $data["foto"]; ?>">
                         </div>
 

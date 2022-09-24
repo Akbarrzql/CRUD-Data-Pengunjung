@@ -4,6 +4,7 @@ require "function.php";
 
 $datapengunjung = mysqli_query($conn, "SELECT * FROM tb_wisata");
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,7 +27,7 @@ include "navbar.php";
         <div class="card-body">
             <div class="row">
                 <div class="col-md-12">
-                    <a type="Button" class="btn btn-dark float-end" style="margin: 10px" href="tambah.php">Tambah Data Baru</a>
+                    <a type="Button" class="btn btn-dark float-end" style="margin: auto;" href="tambah.php">Tambah Data Baru</a>
                 <table class="table table-dark table-striped">
                             <tr>
                                 <th>No</th>
@@ -36,7 +37,7 @@ include "navbar.php";
                                 <th>Asal</th>
                                 <th>Jenis Kelamin</th>
                                 <th>Tgl Masuk</th>
-                                <th>Foto</th>
+                                <!-- <th>Foto</th> -->
                                 <th>Aksi</th>
                             </tr>
                             <?php
@@ -50,11 +51,11 @@ include "navbar.php";
                                 <td><?= $pengunjung["asal"]; ?></td>
                                 <td><?= $pengunjung["jenisKelamin"]; ?></td>
                                 <td><?= $pengunjung["tgl_masuk"]; ?></td>
-                                <td><img src="img/<?= $pengunjung["foto"]; ?>" alt="<?= $pengunjung["nama"]; ?>" width="50" height="50"></td>
+                                <!-- <td><img src="img/<?= $pengunjung["foto"]; ?>" alt="<?= $pengunjung["nama"]; ?>" width="50" height="50"></td> -->
                                 <td>
                                     <a class="btn btn-primary" href=""  data-bs-toggle="modal" data-bs-target="#modalDetail<?= $pengunjung['id'] ?>">Detail</a>
-                                    <a class="btn btn-warning" href="edit.php?id=<?= $pengunjung['id'] ?>">edit</a>
-                                    <a class="btn btn-danger" href="hapus.php?id=<?= $pengunjung['id'] ?>" onclick="return confirm('yakin?');">delete</a>
+                                    <a class="btn btn-warning" href="edit.php?id=<?= $pengunjung['id'] ?>">Edit</a>
+                                    <a class="btn btn-danger" href="hapus.php?id=<?= $pengunjung['id'] ?>" onclick="return confirm('yakin?');">Delete</a>
                                 </td>
                                 </tr>
 

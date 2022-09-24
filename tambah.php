@@ -40,7 +40,7 @@ if (isset($_POST['submit'])) {
                 <h3 align="center">Tambah Data Pengunjung</h3>
                 <div class="card">
                     <div class="card-body">
-                        <form action="" method="POST">
+                        <form action="" method="POST" enctype="multipart/form-data">
                             <div class="form-group">
                                 <input type="text" class="form-control" name="id" id="id" value="0" placeholder="Tambah ID" hidden>
                             </div>
